@@ -1,0 +1,85 @@
+# Cursor IDE
+.cursor/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.lnk
+*.tmp
+*.temp
+desktop.ini
+
+# PowerShell
+*.ps1.log
+*.psm1.log
+*.psd1.log
+*.ps1.bak
+*.psm1.bak
+*.psd1.bak
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs
+bin/
+obj/
+dist/
+build/
+
+# Package files
+*.nupkg
+*.zip
+*.tar.gz
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Pester test results
+PesterResults.xml
+PesterResults.json
+
+# Module manifest backups
+*.psd1.bak
+*.psm1.bak
+
+# Credential files
+*.cred
+*.key
+*.pem
+*.pfx
+*.p12
+
+# Configuration files with sensitive data
+config.psd1
+secrets.psd1
+*.config.local

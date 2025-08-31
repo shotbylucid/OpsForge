@@ -1,0 +1,90 @@
+labels: ['needs-confirmation']
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]
+        > For new ideas, improvements, or collaboration, please use the **Discussion tab** – it's the best place to talk about new features, modules, functions, and overall OpsForge direction. Only open an Issue if you're certain your proposal is well-defined and you're planning to work on a feature or bug (especially for contributions from outside the owner).
+        >
+        > Before submitting: Review our [FAQs](README.md#faq), and check existing [Discussions](https://github.com/shotbylucid/OpsForge/discussions) and [Issues](https://github.com/shotbylucid/OpsForge/issues) to avoid duplication.
+  - type: markdown
+    attributes:
+      value: '# Issue Details'
+  - type: textarea
+    attributes:
+      label: Issue Description
+      description: |
+        Please provide a detailed description of your issue, feature request, or idea.
+        - Which module, script, or function does this concern (e.g. ADTools, DNSTools)?
+        - Describe the problem, limitation, or desired improvement.
+        - Include screenshots, logs, media if applicable.
+        - For code suggestions, attach relevant code blocks in triple backticks.
+      placeholder: |
+        Issue: When running `Get-ADUserDetail`, results are not filtering disabled accounts as expected.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen, or what new capability would you like to see?
+      placeholder: |
+        All disabled user accounts should be excluded from `Get-ADUserDetail` output.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Actual Behavior
+      description: What happens instead, or what is missing from current functionality?
+      placeholder: |
+        Disabled user accounts are still listed in results.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Reproduction Steps
+      description: |
+        Provide step-by-step instructions or code examples to reproduce the issue.
+      placeholder: |
+        1. Use PowerShell: `Get-ADUserDetail -Filter *`
+        2. Observe included disabled accounts
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Relevant Logs or Output (if any)
+      description: |
+        Paste relevant error messages, PowerShell output, or logs here. Please use triple backticks for code blocks.
+      placeholder: |
+        ```
+        SamAccountName: jdoe
+        Enabled: False
+        Department: Engineering
+        ```
+      render: text
+  - type: input
+    attributes:
+      label: Module/Function/Script Name
+      description: |
+        What function, module, or script is impacted (e.g. ADTools/Get-ADUserDetail)?
+      placeholder: ADTools/Get-ADUserDetail
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: OpsForge Version/Branch (if relevant)
+      description: |
+        What version or branch are you using? (e.g. v1.0.2 / main / feature/mybranch)
+      placeholder: main
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: 'I acknowledge that:'
+      options:
+        - label: I have checked prior Discussions and Issues to ensure this isn't a duplicate.
+          required: true
+        - label: I have provided all relevant details, code examples, or configuration.
+          required: true
+        - label: If my contribution is an idea, improvement, or suggestion—not a bug or implementation—I've first discussed it in the **Discussions** tab.
+          required: true
